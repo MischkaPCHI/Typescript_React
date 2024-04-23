@@ -1,7 +1,7 @@
 import "./styles.css";
-import { TestAreaProps } from "./types";
+import { TextAreaProps } from "./types";
 
-function TextArea({placeholder, name, label}: TestAreaProps) {
+function TextArea({placeholder, name, label}: TextAreaProps) {
     return (
         <div className="text-area-container">
             <label>{label}</label>
