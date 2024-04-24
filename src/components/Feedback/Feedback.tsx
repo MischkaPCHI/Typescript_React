@@ -6,15 +6,15 @@ const FeedBack = () => {
     const [likes, setLikes] = useState<number>(0);
     const [dislikes, setDislikes] = useState<number>(0);
 
-    const addLike = () => {
+    const addLike = (): void => {
         setLikes(prevCount => prevCount + 1);
     }
 
-    const addDislikes = () => {
+    const addDislikes = (): void => {
         setDislikes(prevCount => prevCount + 1);
     }
 
-    const reset = () => {
+    const reset = (): void => {
         setLikes(0);
         setDislikes(0);
     }
