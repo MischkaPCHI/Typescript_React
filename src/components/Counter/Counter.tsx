@@ -2,7 +2,7 @@ import "./styles.css";
 import Button from "../Button/Button";
 import { useState } from "react";
 
-function Counter() {
+function Counter({ countValue, onMinusClick, onPlusClick }: any) {
   const [count, setCount] = useState<number>(0);
 
   const onMinus = (): void => {
