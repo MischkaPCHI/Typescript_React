@@ -1,4 +1,6 @@
 import './styles.css';
+import Counter from 'components/Counter/Counter';
+import { useState } from "react";
 
 const Lesson07 = () => {
     type CustomArrayType<T = string> = T[];
@@ -10,7 +12,21 @@ const Lesson07 = () => {
     const arrayMix1: CustomArrayTupelType = ['apple', '2'];
     const arrayMix2: CustomArrayTupelType<number> = ['apple', 2];
 
-    return <div>Lesson07</div>
+    const [count, setCount] = useState<number>(0);
+
+    const onMinus = (): void => {
+      setCount((prevValue) => prevValue - 1);
+    };
+  
+    const onPlus = (): void => {
+      setCount((prevValue) => prevValue + 1);
+    };
+
+    return (
+        <div>
+            <Counter countValue={count} onMinusClick={onMinus} onPlusClick={onPlus} />
+        </div>
+    )
 }
 
 export default Lesson07;
