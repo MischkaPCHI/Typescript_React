@@ -1,21 +1,22 @@
 import "./styles.css";
 import { ProfileCardsProps } from "./types";
+import { ProfileCardStyles, RingStyles, RingINthChild1Styles, RingINthChild2Styles, RingINthChild3Styles, InfoStyles } from "./styles";
 
 const ProfileCard = ({ url, name, job, hobby }: ProfileCardsProps) => {
   return (
-    <div className="profile-card">
-      <div className="ring">
-        <i></i>
-        <i></i>
-        <i></i>
+    <ProfileCardStyles>
+      <RingStyles>
+        <RingINthChild1Styles />
+        <RingINthChild2Styles />
+        <RingINthChild3Styles />
         <img className="avatar" src={url} alt="Avatar" />
-      </div>
-      <div className="info">
+      </RingStyles>
+      <InfoStyles>
         <h3>{name}</h3>
         <p>Род деятельности: {job}</p>
         <p>Хобби: {hobby}</p>
-      </div>
-    </div>
+      </InfoStyles>
+    </ProfileCardStyles>
   );
 };
 
