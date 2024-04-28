@@ -1,13 +1,14 @@
 import "./styles.css";
 import { AnimalCardProps } from "./types";
+import { AnimalCardWrapper, AnimalCardImg } from "./styles";
 
 const AnimalCard = ({ animalData }: AnimalCardProps) => {
   return (
-    <div className="animal-card-wrapper">
+    <AnimalCardWrapper>
       <h2>{animalData.name}</h2>
       <p>{animalData.species}</p>
-      <img src={animalData.image} alt="" />
-    </div>
+      <AnimalCardImg src={animalData.image} alt="" />
+    </AnimalCardWrapper>
   );
 };
 
