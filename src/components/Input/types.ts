@@ -1,8 +1,10 @@
+import { ChangeEvent } from "react";
+
 export interface InputProps {
   label: string;
   name: string;
   type: string;
   placeholder: string;
-  onChange?: (evt: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
   value?: string;
 }
