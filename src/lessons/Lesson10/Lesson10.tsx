@@ -13,7 +13,7 @@ const Lesson10 = () => {
       if (!response.ok) {
         throw new Error("Failed fetch");
       }
-      const body = await response.json();
+      const body = await response.json();////
       setCatFacts((prevFacts) => [...prevFacts, body.fact]);
     } catch (error) {
       console.error(error);
