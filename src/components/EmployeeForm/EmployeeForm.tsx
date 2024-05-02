@@ -54,7 +54,7 @@ const EmployeeForm = () => {
           placeholder="Enter your terms of use"
           label="job title:"
           onChange={formik.handleChange}
-          value={formik.values.termsOfUse.toString()}
+          value={formik.values.termsOfUse.toString()}     // boolean перевращаем в string
         />
 
         <Button type="submit" name="Login">Submit</Button>
