@@ -15,7 +15,7 @@ const EmployeeForm = () => {
     lastName: Yup.string().required("обязательное поле").max(15, "максимальное количество символов - 15"),
     age: Yup.number().required("обязательное поле").min(1, "минимальное количество символов - 1").max(3, "максимальное количество символов - 3"),
     jobTitle: Yup.string().max(30, "максимальное количество символов - 30"),
-    termsOfUse: Yup.boolean().required("обязательное поле"),
+    termsOfUse: Yup.boolean().required("обязательное поле"), //надо поменять на английский или то на русский
   });
 
   const formik = useFormik({
@@ -26,7 +26,7 @@ const EmployeeForm = () => {
       jobTitle: "",
       termsOfUse: false,
     } as EmployeeFormValues,
-    validationSchema: validationSchema,
+    validationSchema,
     onSubmit: (values: EmployeeFormValues) => {
       console.log(values);
     },
@@ -68,7 +68,7 @@ const EmployeeForm = () => {
           placeholder="Enter your terms of use"
           label="job title:"
           onChange={formik.handleChange}
-          value={formik.values.termsOfUse.toString()}
+          value={formik.values.termsOfUse.toString()} //  это надо потом переделать как отдельный компонент Checkbox
         />
 
         <Button type="submit" name="Login">
