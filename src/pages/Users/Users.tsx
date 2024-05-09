@@ -21,7 +21,7 @@ function Users() {
   return (
     <UserWrapper>
       <UserTitle>Users page</UserTitle>
-      <Button name='Go to Home page' onButtonClick={goToHomePage} />
+      <Button name='Go to Home page' onButtonClick={goToHomePage}><h3>Go to Home page</h3></Button>
     </UserWrapper>
   )
 }

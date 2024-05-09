@@ -1,11 +1,16 @@
 import "./App.css";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Layout from 'components/Layout/Layout';
-import About from 'pages/About/About';
-import Home from 'pages/Home/Home';
-import Users from 'pages/Users/Users';
+import Layout from "components/Layout/Layout";
+import About from "pages/About/About";
+import Home from "pages/Home/Home";
+import Users from "pages/Users/Users";
+import Clients from "pages/Clients/Clients";
+import Facebook from "pages/Clients/Facebook/Facebook";
+import Instagram from "pages/Clients/Instagram/Instagram";
+import TikTok from "pages/Clients/TikTok/TikTok";
+
 //Lessons
 // import Lessons06 from "./lessons/Lessons06/Lessons06";
 // import Lesson08 from "lessons/Lesson08/Lesson08";
@@ -15,17 +20,21 @@ import Users from 'pages/Users/Users';
 // import Homework07 from "homeworks/Homework07/Homework07";
 // import Homework08 from "homeworks/Homework08/Homework08";
 // import Homework09 from "homeworks/Homework09/Homework09";
-import Homework11 from "homeworks/Homework11/Homework11";
+// import Homework11 from "homeworks/Homework11/Homework11";
 
 function App() {
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/users' element={<Users />} />
-          <Route path='*' element='Page Not Found'/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/facebook" element={<Facebook />} />
+          <Route path="/clients/instagram" element={<Instagram />} />
+          <Route path="/clients/tiktok" element={<TikTok />} />
+          <Route path="*" element="Page Not Found" />
         </Routes>
       </Layout>
     </BrowserRouter>
