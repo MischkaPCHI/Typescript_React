@@ -5,9 +5,13 @@ function Layout({ children }: LayoutProps) {
   return (
     <LayoutComponent>
       <Header>
-        <HeaderLogoContainer>
-          <HeaderLogo />
-        </HeaderLogoContainer>
+        <StyledNavLink 
+        to='/'
+        style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
+            <HeaderLogoContainer>
+                <HeaderLogo />
+            </HeaderLogoContainer>
+        </StyledNavLink>
         <NavContainer>
           <StyledNavLink
             to='/'
@@ -23,6 +27,11 @@ function Layout({ children }: LayoutProps) {
             to='/users'
             style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
             Users
+          </StyledNavLink>
+          <StyledNavLink
+            to='/clients'
+            style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
+            Clients
           </StyledNavLink>
         </NavContainer>
       </Header>
