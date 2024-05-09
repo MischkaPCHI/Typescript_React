@@ -1,4 +1,11 @@
 import "./App.css";
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Layout from 'components/Layout/Layout';
+import About from 'pages/About/About';
+import Home from 'pages/Home/Home';
+import Users from 'pages/Users/Users';
 //Lessons
 // import Lessons06 from "./lessons/Lessons06/Lessons06";
 // import Lesson08 from "lessons/Lesson08/Lesson08";
@@ -12,15 +19,16 @@ import Homework11 from "homeworks/Homework11/Homework11";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Lessons06 /> */}
-      {/* <Homework07 /> */}
-      {/* <Lesson08 /> */}
-      {/* <Homework08 /> */}
-      {/* <Homework09 /> */}
-      {/* <Lesson10 /> */}
-      <Homework11 />
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='*' element='Page Not Found'/>
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
